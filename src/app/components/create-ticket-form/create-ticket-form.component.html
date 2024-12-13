@@ -1,0 +1,14 @@
+<form (ngSubmit)="postTicket()">
+  <div class="mb-3 mt-3">
+    <label for="type" class="form-label">Type:</label>
+    <input type="text" class="form-control" id="type" [(ngModel)]="ticket.type" name="type" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="price" class="form-label">Price:</label>
+    <input type="number" class="form-control" id="price" [(ngModel)]="ticket.price" name="price" required>
+  </div>
+
+  <ion-button type="submit" class="btn btn-primary">Add Ticket</ion-button>
+  <ion-button class="back-buttom" expand="block" (click)="close()">Cancelar</ion-button>
+</form>

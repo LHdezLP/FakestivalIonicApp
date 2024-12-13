@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tickets
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let t of tickets">
+    <ion-label>
+      <h1>{{t.id}}.{{t.type}}, {{t.price}}, {{t.identifier}}</h1>
+      
+    </ion-label>
+    <ion-button class="edit-buttom" expand="block" (click)="openBuyTicketForm(t)">Adquirir</ion-button>
+    <!-- <ion-button class="edit-buttom" expand="block" (click)="openTicketForm(t)">Editar</ion-button>
+    <ion-button class="delete-buttom" expand="block" (click)="deleteTicket(t.id)">Borrar</ion-button> -->
+  </ion-item>
+  <ion-button class="add-buttom" expand="block" (click)="openCreateTicketForm()">Añadir Ticket</ion-button>
+</ion-content>

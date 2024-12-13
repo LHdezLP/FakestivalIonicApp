@@ -1,0 +1,65 @@
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  font-family: "Oswald, sans-serif";
+  font-size: 14px;
+  font-weight: bold;
+  height: fit-content;
+}
+
+.form-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  background: #3a415f;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: 100vh;
+}
+
+.form-container label {
+  color: #ffffff;
+}
+
+.form-container input {
+  background: #ffffff !important;
+  color: #000000;
+}
+
+.back-button {
+  --background: #3a415f;
+  --color: rgb(239, 176, 98);
+  border: 3px solid rgb(239, 176, 98);
+  border-radius: 8px;
+  --font-family: "Oswald, sans-serif";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.submit-button {
+  --background: rgb(239, 176, 98);
+  --color: #3a415f;
+  border: 3px solid #1f2337;
+  border-radius: 8px;
+  --font-family: "Oswald, sans-serif";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-control {
+  background-color: #fff;  
+  color: #000;             
+  border: 1px solid #ccc;  
+  padding: 10px;           
+  border-radius: 5px;      
+  width: 100%;             
+}

@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modificar Detalle Compra</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form-container">
+    <h2>Introduzca el Identificador de la Compra</h2>
+    <ion-item>
+      <ion-label position="floating">Identificador de Compra</ion-label>
+      <ion-input [(ngModel)]="identificador" type="text" required></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="buscarCompra()">Confirmar</ion-button>
+  </div>
+
+  <div *ngIf="compra" class="compra-details">
+    <h3>Detalles de la Compra</h3>
+    <ion-item>
+      <ion-label position="floating">Identificador</ion-label>
+      <ion-input [(ngModel)]="compra.identificador" type="text" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha</ion-label>
+      <ion-input [(ngModel)]="compra.fecha" type="text" readonly></ion-input>
+    </ion-item>
+
+    <div class="section-title">
+      <h3>Modifique sus datos personales si lo desea.</h3>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input [(ngModel)]="compra.comprador.nombre" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input [(ngModel)]="compra.comprador.apellido" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input [(ngModel)]="compra.comprador.email" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">Teléfono</ion-label>
+            <ion-input [(ngModel)]="compra.comprador.telefono" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="section-title">
+      <h3>Información de los Tickets - Puede modificar su pedido.</h3>
+    </div>
+    <ion-list>
+      <ion-item *ngFor="let ticket of compra.tickets">
+        <ion-label>
+          <h4>Tipo: {{ ticket.type }}</h4>
+          <p>Identificador: {{ ticket.identifier }}</p>
+          <p>Precio: ${{ ticket.price | currency }}</p>
+        </ion-label>
+        <ion-buttons slot="end">
+          <ion-button color="danger" (click)="eliminarTicket(ticket)">Eliminar</ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" color="primary" (click)="actualizarDatos()">Actualizar Datos</ion-button>
+    <ion-button expand="block" color="danger" (click)="cancelarCompra()">Cancelar Compra</ion-button>
+  </div>
+</ion-content>

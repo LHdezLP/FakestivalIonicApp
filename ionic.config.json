@@ -1,0 +1,7 @@
+{
+  "name": "festivalApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

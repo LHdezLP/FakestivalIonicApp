@@ -1,0 +1,90 @@
+ion-item {
+    --background: #fff;
+    --color: #fff; 
+    margin-bottom: 15px; 
+}
+
+ion-label {
+    font-weight: bold;
+    color: #fff;  
+}
+
+ion-input {
+    --background: #fff;
+    --padding-start: 10px;
+    --color: #000;
+    margin-top: 5px; 
+}
+
+ion-input:focus {
+    outline: none;
+    border-color: #888; 
+}
+
+
+ion-item[slot="start"] {
+    --min-height: 50px;  
+}
+
+ion-label {
+    padding: 0 5px;  
+}
+
+.form-container {
+    padding: 20px; 
+    background: transparent;
+}
+
+.compra-details {
+    padding: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #fff;  
+}
+
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;  
+}
+
+ion-list {
+    margin-top: 20px;
+}
+
+ion-item {
+    margin-top: 10px;
+}
+
+ion-buttons {
+    margin-top: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    background-color: #333; 
+    color: white; 
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #888;
+}

@@ -1,0 +1,54 @@
+detalle-compra-form{
+  background: white;
+}
+
+.summary-container {
+    padding: 20px;
+    max-height: 70vh; 
+    overflow-y: auto; 
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .column {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+  }
+  
+  .ticket-container {
+    margin-bottom: 20px;
+  }
+  
+  .ticket-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .ticket-separator {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  ion-button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+
+  ::ng-deep .modal-wrapper {
+    max-height: 80vh; 
+    overflow-y: auto; 
+  }
+  

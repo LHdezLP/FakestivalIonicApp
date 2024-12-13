@@ -1,0 +1,91 @@
+* {
+}
+
+.ticket-panel-container {
+  width: 100%;
+  border: 3px solid rgb(239, 176, 98);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-item {
+  background: white;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+ion-item::after {
+  background-color: white !important;
+}
+
+item-native,
+item-inner,
+input-wrapper,
+ion-label,
+.counter-container {
+  background: white;
+}
+
+.ticket-description {
+  font-family: "Oswald, sans-serif";
+  font-size: 18px;
+  font-weight: bold;
+  color: #3a415f;
+  width: 70vw;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  color: #3a415f;
+  font-family: "Oswald, sans-serif";
+  font-weight: bold;
+}
+
+.counter-number {
+  text-align: center;
+  width: 50px;
+  font-size: 22px;
+  margin: 0 10px;
+}
+
+.icon {
+  font-size: 24px;
+  color: rgb(239, 176, 98);
+  cursor: pointer;
+}
+
+.proceed-button {
+  max-width: 200px;
+  --color: #3a415f;
+  --background: rgb(239, 176, 98);
+  border: 3px solid #3a415f;
+  border-radius: 8px;
+  --font-family: "Oswald, sans-serif";
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px auto; 
+}
+
+.edit-compra-button{
+  max-width: 200px;
+  --color: rgb(239, 176, 98);
+  --background:  #3a415f;
+  border: 3px solid rgb(239, 176, 98);
+  border-radius: 8px;
+  --font-family: "Oswald, sans-serif";
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px auto;
+
+}
+
+.buttons-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

@@ -1,0 +1,52 @@
+<div class="form-container">
+  <form (ngSubmit)="postCompra()" #compraForm="ngForm">
+    <div class="form-grid">
+      <div>
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="comprador.nombre" name="nombre" required maxlength="20">
+        <div *ngIf="compraForm.submitted && !comprador.nombre" class="error-message">
+          El nombre es obligatorio.
+        </div>
+      </div>
+      <div>
+        <label for="apellido" class="form-label">Apellidos:</label>
+        <input type="text" class="form-control" id="apellido" [(ngModel)]="comprador.apellido" name="apellido" required maxlength="20">
+        <div *ngIf="compraForm.submitted && !comprador.apellido" class="error-message">
+          Los apellidos son obligatorios.
+        </div>
+      </div>
+      <div>
+        <label for="direccion" class="form-label">Dirección:</label>
+        <input type="text" class="form-control" id="direccion" [(ngModel)]="comprador.direccion" name="direccion" required maxlength="20">
+        <div *ngIf="compraForm.submitted && !comprador.direccion" class="error-message">
+          La dirección es obligatoria.
+        </div>
+      </div>
+      <div>
+        <label for="dni" class="form-label">DNI:</label>
+        <input type="text" class="form-control" id="dni" [(ngModel)]="comprador.dni" name="dni" required maxlength="20">
+        <div *ngIf="compraForm.submitted && !comprador.dni" class="error-message">
+          El DNI es obligatorio, Debe tener 8 digitos y una letra.
+        </div>
+      </div>
+      <div>
+        <label for="telefono" class="form-label">Teléfono:</label>
+        <input type="text" class="form-control" id="telefono" [(ngModel)]="comprador.telefono" name="telefono" required maxlength="20">
+        <div *ngIf="compraForm.submitted && !comprador.telefono" class="error-message">
+          El teléfono es obligatorio.
+        </div>
+      </div>
+      <div>
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="comprador.email" name="email" required maxlength="20">
+        <div *ngIf="compraForm.submitted && !comprador.email" class="error-message">
+          El email es obligatorio. Ejem:"persona&#64;mail.com".
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <ion-button type="submit" class="submit-button">Confirmar Compra</ion-button>
+      <ion-button class="back-button" expand="block" (click)="close()">Cancelar Compra</ion-button>
+    </div>
+  </form>
+</div>

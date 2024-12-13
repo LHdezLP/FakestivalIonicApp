@@ -1,0 +1,29 @@
+.wrapper {
+  background: transparent;
+}
+
+.ticket-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.section-container {
+  margin-bottom: 20px;
+}
+
+.front-img {
+  width: 100%;
+}
+
+/* Asegúrate de que los componentes dentro de la aplicación también tengan fondo transparente */
+item-native, .input-wrapper {
+  background: transparent !important;
+}
+
+/* Asegúrate de que los ion-items y otros componentes tengan un fondo transparente */
+ion-item, ion-label, .ticket-panel-container {
+  background: transparent !important;
+}

@@ -1,0 +1,136 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  a {
+    color: RGB(239, 176, 98) !important;
+    text-decoration: none !important;
+  }
+  
+
+  @font-face {
+    font-family: "MetalMania";
+    src: url("/assets/fonts/MetalMania-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Oswald";
+    src: url("/assets/fonts/Oswald-Light.ttf") format("truetype"),
+         url("/assets/fonts/Oswald-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Oswald";
+    src: url("/assets/fonts/Oswald-Bold.ttf") format("truetype"),
+         url("/assets/fonts/Oswald-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+  body {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3a415f 2%, #191e34 28%);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  
+
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    --bs-link-color-rgb: 255, 255, 255;
+    --bs-link-opacity: 0.8;
+  
+    color: rgba(255, 255, 255, 0.87);
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  ion-content {
+    --background: transparent !important; /* Forzar fondo transparente */
+  }
+
+  ion-header, ion-footer, ion-toolbar, ion-item, ion-page {
+    --background: transparent !important;
+    background: transparent !important;
+  }
+
+  ion-button {
+   
+  }
+
+  ion-item {
+    --border-width: 0; 
+    --inner-border-width: 0; 
+  }
+
+  ion-page {
+
+    background: linear-gradient(to bottom, #3a415f 2%, #191e34 28%);
+  }
+  
+  

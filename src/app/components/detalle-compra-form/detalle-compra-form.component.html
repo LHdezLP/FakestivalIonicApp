@@ -1,0 +1,43 @@
+<div class="summary-container">
+  <h1>Detalles de su compra con identificador: {{ compra.identificador }}</h1>
+  <h2>Deberá conservarlo para poder modificar su compra</h2>
+
+  <h2>Información del Comprador</h2>
+  <div class="row">
+    <div class="column">
+      <p><strong>Nombre:</strong> {{ comprador.nombre }} {{ comprador.apellido }}</p>
+      <p><strong>DNI:</strong> {{ comprador.dni }}</p>
+    </div>
+    <div class="column">
+      <p><strong>Dirección:</strong> {{ comprador.direccion }}</p>
+      <p><strong>Teléfono:</strong> {{ comprador.telefono }}</p>
+      <p><strong>Email:</strong> {{ comprador.email }}</p>
+    </div>
+  </div>
+
+  <h2>Información de la Compra</h2>
+  <div class="row">
+    <div class="column">
+      <p><strong>Identificador:</strong> {{ compra.identificador }}</p>
+    </div>
+    <div class="column">
+      <p><strong>Fecha y Hora:</strong> {{ compra.fecha | date: 'dd/MM/yyyy HH:mm' }}</p>
+    </div>
+  </div>
+
+  <h2>Entradas Adquiridas</h2>
+  <div *ngFor="let ticket of tickets" class="ticket-container">
+    <div class="ticket-row">
+      <div class="column">
+        <p><strong>Tipo:</strong> {{ ticket.type }}</p>
+        <p><strong>Precio:</strong> {{ ticket.price | currency }}</p>
+      </div>
+      <div class="column">
+        <p><strong>Identificador:</strong> {{ ticket.identifier }}</p>
+      </div>
+    </div>
+    <ion-item class="ticket-separator"></ion-item> 
+  </div>
+
+  <ion-button (click)="close()">Cerrar</ion-button>
+</div>

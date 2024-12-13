@@ -1,0 +1,50 @@
+<ion-list class="ticket-panel-container" style="width: 100%; border: 4px solid rgb(239, 176, 98); background: white;">
+  
+  <!-- Standard Pass -->
+  <ion-item style="background-color: white; border: 4px solid #3a415f; border-radius: 8px; margin: 10px;">
+    <ion-label style="background-color: white; padding: 10px;">
+      <div class="ticket-description" style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: bold; color: #3a415f; width: 70vw;">
+        <span class="ticket-type">Standard Pass | 99.99€</span>
+      </div>
+    </ion-label>
+    <div class="counter-container" style="display: flex; align-items: center;">
+      <ion-icon name="remove-circle-outline" (click)="handleCounterChange('Standard Pass', -1)" style="font-size: 24px; color: rgb(239, 176, 98); cursor: pointer;"></ion-icon>
+      <ion-input [value]="counts['Standard Pass']" readonly style="text-align: center; width: 50px; font-size: 16px; margin: 0 10px;"></ion-input>
+      <ion-icon name="add-circle-outline" (click)="handleCounterChange('Standard Pass', 1)" style="font-size: 24px; color: rgb(239, 176, 98); cursor: pointer;"></ion-icon>
+    </div>
+  </ion-item>
+
+  <!-- VIP Pass -->
+  <ion-item style="background-color: white; border: 4px solid #3a415f; border-radius: 8px; margin: 10px;">
+    <ion-label style="background-color: white; padding: 10px;">
+      <div class="ticket-description" style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: bold; color: #3a415f; width: 70vw;">
+        <span class="ticket-type">VIP Pass | 119.99€</span>
+      </div>
+    </ion-label>
+    <div class="counter-container" style="display: flex; align-items: center;">
+      <ion-icon name="remove-circle-outline" (click)="handleCounterChange('VIP Pass', -1)" style="font-size: 24px; color: rgb(239, 176, 98); cursor: pointer;"></ion-icon>
+      <ion-input [value]="counts['VIP Pass']" readonly style="text-align: center; width: 50px; font-size: 16px; margin: 0 10px;"></ion-input>
+      <ion-icon name="add-circle-outline" (click)="handleCounterChange('VIP Pass', 1)" style="font-size: 24px; color: rgb(239, 176, 98); cursor: pointer;"></ion-icon>
+    </div>
+  </ion-item>
+
+  <!-- Premium Pass -->
+  <ion-item style="background-color: white; border: 4px solid #3a415f; border-radius: 8px; margin: 10px;">
+    <ion-label style="background-color: white; padding: 10px;">
+      <div class="ticket-description" style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: bold; color: #3a415f; width: 70vw;">
+        <span class="ticket-type">Premium Pass | 149.99€</span>
+      </div>
+    </ion-label>
+    <div class="counter-container" style="display: flex; align-items: center;">
+      <ion-icon name="remove-circle-outline" (click)="handleCounterChange('Premium Pass', -1)" style="font-size: 24px; color: rgb(239, 176, 98); cursor: pointer;"></ion-icon>
+      <ion-input [value]="counts['Premium Pass']" readonly style="text-align: center; width: 50px; font-size: 16px; margin: 0 10px;"></ion-input>
+      <ion-icon name="add-circle-outline" (click)="handleCounterChange('Premium Pass', 1)" style="font-size: 24px; color: rgb(239, 176, 98); cursor: pointer;"></ion-icon>
+    </div>
+  </ion-item>
+
+  <div class="buttons-container">
+  <ion-button class="proceed-button" expand="block" (click)="proceed()">Proceed</ion-button>
+  <ion-button class="edit-compra-button" expand="block" (click)="openCompraModal()">Modify Your Ticket Orders</ion-button>
+  </div>
+
+</ion-list>
