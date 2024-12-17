@@ -8,7 +8,7 @@ import { ModificarDetalleCompraComponent } from '../modificar-detalle-compra/mod
 
 interface Ticket {
   id: number;
-  adquidirdo: boolean;
+  adquirido: boolean;
   identifier: string;
   price: number;
   type: string; 
@@ -36,7 +36,7 @@ export class TicketPanelComponent {
 
   getAllTickets() {
     this.ticketsService.getTickets().subscribe((response: any) => {
-      this.tickets = response.filter((ticket: Ticket) => !ticket.adquidirdo);
+      this.tickets = response.filter((ticket: Ticket) => !ticket.adquirido);
       console.log('Tickets disponibles:', this.tickets);
     });
   }
@@ -71,7 +71,7 @@ export class TicketPanelComponent {
   addTicketsToBuy(ticketsToBuy: Ticket[], type: string, quantity: number) {
     console.log(`Filtering tickets for type: ${type}`);
 
-    const availableTickets = this.tickets.filter(ticket => ticket.type === type && !ticket.adquidirdo);
+    const availableTickets = this.tickets.filter(ticket => ticket.type === type && !ticket.adquirido);
 
     console.log(`Available tickets for ${type}:`, availableTickets);
 
@@ -86,7 +86,7 @@ export class TicketPanelComponent {
       
       ticketsToBuy.push({
         id: ticket.id,
-        adquidirdo: ticket.adquidirdo,
+        adquirido: ticket.adquirido,
         identifier: ticket.identifier,
         price: ticket.price,
         type: ticket.type,
